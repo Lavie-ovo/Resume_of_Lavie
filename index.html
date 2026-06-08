@@ -9,8 +9,7 @@
     :root {
       --paper: #F1ECE2; --paper-2: #E7E1D4;
       --ink: #1A1614; --ink-2: #4A4339; --ink-3: #87796B;
-      --rule: #C4BAA8; --accent: #2D5F7C; --accent-light: #D6E4ED;
-      --accent-warm: #3A7088;
+      --rule: #C4BAA8; --accent: #2D5F7C; --accent-light: #D6E4ED; --accent-warm: #3A7088;
     }
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     html,body{height:100%}
@@ -19,7 +18,7 @@
       color:var(--ink);background:var(--paper);line-height:1.55;
       -webkit-font-smoothing:antialiased;display:flex;flex-direction:column;overflow:hidden;
     }
-    a{color:inherit;text-decoration:none}img{display:block;max-width:100%}
+    a{color:inherit;text-decoration:none}img{display:block}
 
     /* Header */
     header{
@@ -27,9 +26,9 @@
       justify-content:space-between;height:52px;
       border-bottom:1px solid var(--rule);background:var(--paper);z-index:10;
     }
-    .brand{font-weight:700;font-size:.92rem;letter-spacing:.02em;white-space:nowrap}
+    .brand{font-weight:700;font-size:.92rem;letter-spacing:.02em}
     .brand em{font-style:italic;font-weight:400;color:var(--ink-3);margin-left:6px;font-size:.8rem}
-    .nav-tabs{display:flex;gap:0;position:relative}
+    .nav-tabs{display:flex;position:relative}
     .nav-tabs button{
       padding:16px 18px;border:none;background:none;font-size:.82rem;
       color:var(--ink-3);cursor:pointer;font-family:inherit;transition:color .2s;font-weight:500;
@@ -41,16 +40,12 @@
       transition:left .35s cubic-bezier(.2,0,0,1),width .35s cubic-bezier(.2,0,0,1);
     }
 
-    /* Main */
-    main{flex:1;overflow:hidden;display:flex;padding:0}
+    main{flex:1;overflow:hidden;display:flex}
     .tab-panel{display:none;width:100%;height:100%}
     .tab-panel.active{display:flex;animation:fadeIn .4s cubic-bezier(.2,0,0,1) both}
     @keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
 
-    .btn{
-      display:inline-flex;align-items:center;gap:5px;padding:8px 18px;border-radius:3px;
-      font-size:.8rem;font-weight:600;cursor:pointer;transition:all .2s;font-family:inherit;
-    }
+    .btn{display:inline-flex;align-items:center;gap:5px;padding:8px 18px;border-radius:3px;font-size:.8rem;font-weight:600;cursor:pointer;transition:all .2s;font-family:inherit}
     .btn-primary{background:var(--accent);color:var(--paper);border:none}
     .btn-primary:hover{background:var(--accent-warm)}
     .btn-ghost{background:transparent;color:var(--ink-2);border:1px solid var(--rule)}
@@ -60,13 +55,17 @@
     /* ===== ABOUT ===== */
     .about-wrap{display:flex;width:100%;padding:48px 64px;gap:56px;align-items:center}
     .about-photo{flex-shrink:0}
-    .about-photo img{width:200px;height:200px;border-radius:50%;object-fit:cover;box-shadow:0 1px 8px rgba(26,22,20,.1)}
+    .about-photo img{width:200px;height:200px;border-radius:50%;object-fit:cover;box-shadow:0 2px 12px rgba(26,22,20,.12)}
     .about-text{flex:1;min-width:0}
     .about-text h1{font-size:1.8rem;font-weight:700;letter-spacing:.03em;margin-bottom:4px}
     .about-text .roles{font-size:.9rem;color:var(--accent);font-weight:600;margin-bottom:6px}
-    .about-text .meta{font-size:.85rem;color:var(--ink-3);margin-bottom:20px}
+    .about-text .meta{font-size:.85rem;color:var(--ink-3);margin-bottom:24px}
     .about-text .meta strong{color:var(--ink-2);font-weight:600}
-    .about-text .intro{font-size:.9rem;color:var(--ink-2);line-height:1.8;margin-bottom:22px;max-width:60ch}
+    .about-text .traits{display:flex;flex-direction:column;gap:14px;margin-bottom:28px}
+    .trait{display:flex;gap:14px;align-items:flex-start}
+    .trait-icon{flex-shrink:0;width:20px;height:20px;display:flex;align-items:center;justify-content:center;color:var(--accent);font-size:.9rem;margin-top:1px}
+    .trait p{font-size:.88rem;color:var(--ink-2);line-height:1.7}
+    .trait p strong{color:var(--ink)}
     .about-btns{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:28px}
     .honors{display:flex;gap:0}
     .honor{border-right:1px solid var(--rule);padding:0 24px;text-align:center}
@@ -79,50 +78,41 @@
     .edu-wrap{display:flex;width:100%;padding:40px 64px;gap:48px;align-items:center}
     .edu-text{flex:1;min-width:0}
     .edu-text .school{font-size:1.25rem;font-weight:700;margin-bottom:6px;display:flex;align-items:baseline;gap:10px}
-    .badge{font-size:.68rem;font-weight:600;color:var(--accent);background:var(--accent-light);padding:2px 10px;border-radius:20px;letter-spacing:.04em}
+    .badge{font-size:.68rem;font-weight:600;color:var(--accent);background:var(--accent-light);padding:3px 10px;border-radius:20px;letter-spacing:.04em}
     .edu-text .meta{font-size:.85rem;color:var(--ink-3);margin-bottom:24px}
     .edu-text .meta strong{color:var(--ink);font-weight:600}
     .edu-pills{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px}
     .pill{padding:7px 16px;border:1px solid var(--rule);border-radius:20px;font-size:.82rem;color:var(--ink-2);font-weight:500}
     .pill strong{color:var(--ink)}
-    .edu-desc{font-size:.85rem;color:var(--ink-2);line-height:1.8;max-width:56ch}
-    .certs{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;flex-shrink:0}
+    .edu-desc{font-size:.85rem;color:var(--ink-2);line-height:1.8;max-width:52ch}
+    .certs{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;flex-shrink:0}
     .cert{text-align:center}
-    .cert img{width:130px;aspect-ratio:3/4;object-fit:cover;border-radius:2px;box-shadow:0 1px 6px rgba(26,22,20,.08)}
-    .cert .lbl{font-size:.7rem;color:var(--ink-3);margin-top:5px;letter-spacing:.04em}
+    .cert img{width:160px;aspect-ratio:3/4;object-fit:cover;border-radius:2px;box-shadow:0 1px 6px rgba(26,22,20,.1)}
+    .cert .lbl{font-size:.7rem;color:var(--ink-3);margin-top:6px;letter-spacing:.04em}
 
-    /* ===== PROJECTS ===== */
-    .proj-wrap{display:flex;width:100%;padding:0 0 0 0;gap:0;height:100%}
-    .proj-hero{
-      width:44%;flex-shrink:0;display:flex;align-items:center;justify-content:center;
-      background:var(--paper-2);position:relative;overflow:hidden;
-      border-right:4px solid var(--paper);
+    /* ===== PROJECTS (magazine feature layout) ===== */
+    .proj-wrap{
+      width:100%;height:100%;position:relative;display:flex;
+      background:var(--ink);
     }
-    .proj-hero img{
-      width:100%;height:100%;object-fit:cover;
-      transition:opacity .3s ease;
-    }
-    .proj-hero .frame{
-      position:absolute;inset:12px;border:1px solid rgba(255,255,255,.3);
-      pointer-events:none;border-radius:2px;
-    }
-    .proj-info{
-      flex:1;padding:32px 40px;display:flex;flex-direction:column;
-      justify-content:center;min-width:0;
-    }
-    .proj-info h3{font-size:1.2rem;font-weight:700;margin-bottom:3px}
-    .proj-info .role-line{font-size:.85rem;color:var(--accent);font-weight:600;margin-bottom:24px}
-    .proj-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;margin-bottom:20px}
-    .pmod h4{font-size:.84rem;font-weight:700;margin-bottom:10px;letter-spacing:.02em}
-    .pmod li{font-size:.8rem;color:var(--ink-2);margin-bottom:5px;list-style:none;position:relative;padding-left:14px;line-height:1.55}
-    .pmod li::before{content:'—';position:absolute;left:0;color:var(--ink-3)}
-    .thumbs{display:flex;gap:8px;padding-top:16px;border-top:1px solid var(--rule)}
+    .proj-bg{position:absolute;inset:0}
+    .proj-bg img{width:100%;height:100%;object-fit:cover;opacity:.55;transition:opacity .5s ease}
+    .proj-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(26,22,20,.75) 0%,rgba(26,22,20,.3) 50%,rgba(26,22,20,.6) 100%)}
+    .proj-content{position:relative;z-index:1;width:100%;display:flex;flex-direction:column;justify-content:center;padding:40px 56px;color:#fff}
+    .proj-content h3{font-size:1.5rem;font-weight:700;margin-bottom:4px;letter-spacing:.02em}
+    .proj-content .role-line{font-size:.88rem;opacity:.8;font-weight:400;margin-bottom:28px}
+    .proj-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:32px;margin-bottom:24px}
+    .pmod{border-left:2px solid rgba(255,255,255,.25);padding-left:20px}
+    .pmod h4{font-size:.85rem;font-weight:700;margin-bottom:10px;opacity:.95}
+    .pmod li{font-size:.8rem;opacity:.8;margin-bottom:5px;list-style:none;position:relative;padding-left:14px;line-height:1.55}
+    .pmod li::before{content:'—';position:absolute;left:0;opacity:.5}
+    .thumbs{display:flex;gap:8px}
     .thumbs img{
-      width:72px;height:52px;object-fit:cover;border-radius:2px;cursor:pointer;
-      transition:all .2s;box-shadow:0 1px 2px rgba(0,0,0,.08);border:2px solid transparent;
+      width:72px;height:50px;object-fit:cover;border-radius:2px;cursor:pointer;
+      transition:all .2s;opacity:.55;border:2px solid transparent;
     }
-    .thumbs img:hover{transform:translateY(-2px);box-shadow:0 2px 8px rgba(0,0,0,.12)}
-    .thumbs img.active{border-color:var(--accent);box-shadow:0 0 0 2px var(--accent-light)}
+    .thumbs img:hover{opacity:.85;transform:translateY(-2px)}
+    .thumbs img.active{opacity:1;border-color:rgba(255,255,255,.7)}
 
     /* ===== SKILLS ===== */
     .skills-wrap{display:flex;width:100%;padding:32px 64px;gap:44px;align-items:center}
@@ -130,18 +120,10 @@
     .skill-cat{margin-bottom:18px}
     .skill-cat h4{font-size:.7rem;color:var(--ink-3);text-transform:uppercase;letter-spacing:.12em;margin-bottom:8px;font-weight:600}
     .skill-tags{display:flex;flex-wrap:wrap;gap:7px}
-    .skill-tag{
-      padding:6px 15px;border-radius:16px;font-size:.8rem;font-weight:500;cursor:pointer;
-      background:transparent;color:var(--ink-2);border:1px solid var(--rule);
-      transition:all .25s;font-family:inherit;
-    }
+    .skill-tag{padding:6px 15px;border-radius:16px;font-size:.8rem;font-weight:500;cursor:pointer;background:transparent;color:var(--ink-2);border:1px solid var(--rule);transition:all .25s;font-family:inherit}
     .skill-tag.primary{color:var(--accent);border-color:var(--accent-light);background:var(--accent-light);font-weight:600}
-    .skill-tag:hover,.skill-tag.hovered{
-      background:var(--accent);color:#fff;border-color:var(--accent);transform:translateY(-1px);
-    }
-    .skill-tag.primary:hover,.skill-tag.primary.hovered{
-      background:var(--accent-warm);border-color:var(--accent-warm);color:#fff;
-    }
+    .skill-tag:hover,.skill-tag.hovered{background:var(--accent);color:#fff;border-color:var(--accent);transform:translateY(-1px)}
+    .skill-tag.primary:hover,.skill-tag.primary.hovered{background:var(--accent-warm);border-color:var(--accent-warm);color:#fff}
     .skills-right{width:44%;flex-shrink:0;background:var(--paper-2);border-radius:4px;display:flex;align-items:center;justify-content:center;min-height:340px;position:relative;overflow:hidden}
     .skills-right img{width:100%;height:100%;object-fit:contain;padding:20px;transition:opacity .35s ease;position:absolute;inset:0;max-height:100%}
     .skills-right .hint{color:var(--ink-3);font-size:.78rem;position:absolute;pointer-events:none;text-align:center;line-height:1.6;z-index:1}
@@ -158,16 +140,12 @@
     .exp-card .cap{position:absolute;bottom:0;left:0;right:0;padding:12px 14px;background:linear-gradient(transparent,rgba(26,22,20,.7));color:#fff}
     .exp-card .cap h4{font-size:.82rem;font-weight:700;margin-bottom:1px}
     .exp-card .cap p{font-size:.72rem;opacity:.85}
-    /* Featured card spans full height */
     .exp-card.featured{grid-row:1/3}
-    /* Varying layout */
     .exp-card:nth-child(2){grid-column:2/4}
 
-    /* ===== Toast ===== */
     .toast{position:fixed;bottom:28px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--ink);color:var(--paper);padding:9px 22px;border-radius:3px;font-size:.8rem;font-weight:600;opacity:0;transition:all .3s ease;z-index:999;pointer-events:none}
     .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
 
-    /* ===== Responsive ===== */
     @media(max-width:860px){
       body{overflow:auto}
       header{padding:0 20px;flex-direction:column;height:auto;gap:4px;padding-top:10px}
@@ -180,14 +158,14 @@
       .honors{flex-wrap:wrap;justify-content:center}
       .honor{border-right:none;padding:8px 14px}
       .honor:last-child{padding-right:14px}
-      .about-text .intro{max-width:none}
+      .trait{justify-content:center;text-align:left}
       .edu-wrap{flex-direction:column;padding:28px 24px;gap:28px}
       .certs{grid-template-columns:repeat(2,1fr)}
       .cert img{width:100%}
-      .proj-wrap{flex-direction:column;height:auto}
-      .proj-hero{width:100%;height:220px;border-right:none;border-bottom:4px solid var(--paper)}
-      .proj-info{padding:24px;justify-content:flex-start}
-      .proj-grid{grid-template-columns:1fr;gap:16px}
+      .proj-wrap{flex-direction:column;height:auto;min-height:100vh}
+      .proj-content{padding:32px 24px;justify-content:flex-start}
+      .proj-content h3{font-size:1.2rem}
+      .proj-grid{grid-template-columns:1fr;gap:20px}
       .skills-wrap{flex-direction:column;padding:24px;gap:24px}
       .skills-right{width:100%;min-height:200px;aspect-ratio:4/3}
       .explore-wrap{flex-direction:column;padding:24px;gap:18px}
@@ -196,11 +174,12 @@
       .exp-card{aspect-ratio:3/2}
       .exp-card.featured{grid-row:auto}
       .exp-card:nth-child(2){grid-column:auto}
-      .thumbs img{width:56px;height:40px}
     }
     @media(max-width:480px){
       .explore-grid{grid-template-columns:1fr}
       .certs{grid-template-columns:1fr 1fr}
+      .proj-grid{grid-template-columns:1fr}
+      .thumbs img{width:56px;height:40px}
     }
   </style>
 </head>
@@ -228,7 +207,20 @@
       <h1>马一丹</h1>
       <p class="roles">机械结构实习生 · 产品经理实习生 · 运营 / 项目管理实习生</p>
       <p class="meta"><strong>哈尔滨工程大学</strong>（211 / 双一流）· 光电信息科学与工程 本科 · 排名 <strong>前 10%</strong></p>
-      <p class="intro">对机器人设计全流程有深入理解，从机械构型到跨方向联调都有实操经验。善于跨方向沟通，RoboMaster 期间与电控、硬件同学紧密配合——知道「机械改一个尺寸，电控和硬件要跟着变什么」。习惯在项目推进中复盘反思，先定位根因再调整方案，不把问题留到下次。</p>
+      <div class="traits">
+        <div class="trait">
+          <div class="trait-icon">&#9654;</div>
+          <p><strong>复盘驱动。</strong>每次项目结束后会系统复盘——哪些做对了、哪些可以更好、下次怎么避免。崩过方案也崩过心态，但每次都爬起来把根因找到。不把问题留到下一次。</p>
+        </div>
+        <div class="trait">
+          <div class="trait-icon">&#9654;</div>
+          <p><strong>跨方向沟通是本能。</strong>做任何设计变更前，先问一圈受影响的方向——"机械改一个尺寸，电控和硬件要跟着变什么？"信息对齐后再动手，这是我养成的肌肉记忆。</p>
+        </div>
+        <div class="trait">
+          <div class="trait-icon">&#9654;</div>
+          <p><strong>好奇心驱动学习。</strong>课余自学 Fusion 360 拓扑优化、Ansys 仿真分析、Photoshop 平面设计——不是因为课程要求，而是想知道"怎么做才能更好"。不满足于能做出来，追求做得更好。</p>
+        </div>
+      </div>
       <div class="about-btns">
         <a href="resume.pdf" class="btn btn-primary" download="马一丹_机械结构实习生_简历.pdf">下载简历 PDF</a>
         <button class="btn btn-ghost" onclick="copyEmail()">3514776103@qq.com</button>
@@ -256,7 +248,7 @@
         <div class="pill">多次校级一等奖学金</div>
         <div class="pill">校级优秀团干部</div>
       </div>
-      <p class="edu-desc">高考以优异成绩考入哈尔滨工程大学光电信息科学与工程专业。大一学年即获得国家奖学金（全院仅少数人获评），并获评黑龙江省三好学生，专业成绩持续保持前列。</p>
+      <p class="edu-desc">高考以优异成绩考入哈尔滨工程大学。大一学年即获国家奖学金并获评黑龙江省三好学生，专业成绩持续保持前列。英语六级 577 分，可流畅阅读英文文献并进行日常交流。</p>
     </div>
     <div class="certs">
       <div class="cert"><img src="images/honor-national.jpg" alt="国奖证书"><p class="lbl">国家奖学金</p></div>
@@ -270,11 +262,9 @@
 <!-- ===== 项目经历 ===== -->
 <div class="tab-panel" id="tab-projects">
   <div class="proj-wrap">
-    <div class="proj-hero">
-      <img src="images/car-real.jpg" alt="RoboMaster 工程机器人" id="projHero">
-      <div class="frame"></div>
-    </div>
-    <div class="proj-info">
+    <div class="proj-bg"><img src="images/car-real.jpg" alt="RoboMaster" id="projBg"></div>
+    <div class="proj-overlay"></div>
+    <div class="proj-content">
       <h3>全国大学生机器人大赛 RoboMaster</h3>
       <p class="role-line">工程组组长 & 运营经理 · 2025.09 – 2026.06</p>
       <div class="proj-grid">
@@ -297,7 +287,7 @@
       </div>
       <div class="thumbs" id="projThumbs">
         <img src="images/car-real.jpg" data-full="images/car-real.jpg" class="active" alt="实物">
-        <img src="images/car-sw.jpg" data-full="images/car-sw.jpg" alt="SW模型">
+        <img src="images/car-sw.jpg" data-full="images/car-sw.jpg" alt="SW">
         <img src="images/car-sketch.jpg" data-full="images/car-sketch.jpg" alt="线稿">
         <img src="images/ansys-1.jpg" data-full="images/ansys-1.jpg" alt="Ansys">
         <img src="images/ansys-2.jpg" data-full="images/ansys-2.jpg" alt="Ansys2">
@@ -381,63 +371,34 @@
 <div class="toast" id="toast">邮箱已复制到剪贴板</div>
 
 <script>
-// === Tab Switching ===
 const tabs=document.querySelectorAll('.nav-tabs button');
 const panels=document.querySelectorAll('.tab-panel');
 const indicator=document.getElementById('indicator');
-function updateIndicator(el){indicator.style.left=el.offsetLeft+'px';indicator.style.width=el.offsetWidth+'px'}
-const activeTab=document.querySelector('.nav-tabs button.active');
-if(activeTab)updateIndicator(activeTab);
-tabs.forEach(tab=>{tab.addEventListener('click',()=>{const t=tab.dataset.tab;tabs.forEach(b=>b.classList.remove('active'));panels.forEach(p=>p.classList.remove('active'));tab.classList.add('active');updateIndicator(tab);const panel=document.getElementById('tab-'+t);if(panel){panel.classList.add('active');panel.style.animation='none';panel.offsetHeight;panel.style.animation=''}})});
-window.addEventListener('resize',()=>{const a=document.querySelector('.nav-tabs button.active');if(a)updateIndicator(a)});
+function update(el){indicator.style.left=el.offsetLeft+'px';indicator.style.width=el.offsetWidth+'px'}
+const at=document.querySelector('.nav-tabs button.active');if(at)update(at);
+tabs.forEach(tab=>{tab.addEventListener('click',()=>{const t=tab.dataset.tab;tabs.forEach(b=>b.classList.remove('active'));panels.forEach(p=>p.classList.remove('active'));tab.classList.add('active');update(tab);const p=document.getElementById('tab-'+t);if(p){p.classList.add('active');p.style.animation='none';p.offsetHeight;p.style.animation=''}})});
+window.addEventListener('resize',()=>{const a=document.querySelector('.nav-tabs button.active');if(a)update(a)});
 
-// === Project thumbnail switching ===
-const projHero=document.getElementById('projHero');
-document.querySelectorAll('#projThumbs img').forEach(thumb=>{
-  thumb.addEventListener('click',()=>{
-    document.querySelectorAll('#projThumbs img').forEach(t=>t.classList.remove('active'));
-    thumb.classList.add('active');
-    projHero.style.opacity='0';
-    setTimeout(()=>{
-      projHero.src=thumb.dataset.full;
-      projHero.onload=()=>{projHero.style.opacity='1'};
-    },200);
+// Project: thumbnail → background switch
+const projBg=document.getElementById('projBg');
+document.querySelectorAll('#projThumbs img').forEach(t=>{
+  t.addEventListener('click',()=>{
+    document.querySelectorAll('#projThumbs img').forEach(x=>x.classList.remove('active'));
+    t.classList.add('active');
+    projBg.style.opacity='0';
+    setTimeout(()=>{projBg.src=t.dataset.full;projBg.onload=()=>{projBg.style.opacity='1'}},250);
   });
 });
 
-// === Skill hover preview with fade transition ===
-const skillImg=document.getElementById('skillImg');
-const skillHint=document.getElementById('skillHint');
-let currentSkillSrc='';
-
+// Skill hover preview
+const sImg=document.getElementById('skillImg'),sHint=document.getElementById('skillHint');
+let cur='';
 document.querySelectorAll('.skill-tag[data-img]').forEach(tag=>{
-  tag.addEventListener('mouseenter',()=>{
-    const newSrc=tag.dataset.img;
-    if(newSrc===currentSkillSrc)return;
-    currentSkillSrc=newSrc;
-    skillHint.style.display='none';
-    // Fade out, swap, fade in
-    skillImg.style.opacity='0';
-    setTimeout(()=>{
-      skillImg.src=newSrc;
-      skillImg.onload=()=>{skillImg.style.opacity='1'};
-    },200);
-    document.querySelectorAll('.skill-tag').forEach(t=>t.classList.remove('hovered'));
-    tag.classList.add('hovered');
-  });
+  tag.addEventListener('mouseenter',()=>{const n=tag.dataset.img;if(n===cur)return;cur=n;sHint.style.display='none';sImg.style.opacity='0';setTimeout(()=>{sImg.src=n;sImg.onload=()=>{sImg.style.opacity='1'}},200);document.querySelectorAll('.skill-tag').forEach(t=>t.classList.remove('hovered'));tag.classList.add('hovered')});
   tag.addEventListener('mouseleave',()=>tag.classList.remove('hovered'));
 });
+const ft=document.querySelector('.skill-tag[data-img]');if(ft){cur=ft.dataset.img;sImg.src=cur;sImg.style.opacity='1';sHint.style.display='none'}
 
-// Show first tagged skill image by default
-const firstTag=document.querySelector('.skill-tag[data-img]');
-if(firstTag){
-  currentSkillSrc=firstTag.dataset.img;
-  skillImg.src=currentSkillSrc;
-  skillImg.style.opacity='1';
-  skillHint.style.display='none';
-}
-
-// === Email copy ===
 function copyEmail(){navigator.clipboard.writeText('3514776103@qq.com').then(()=>{const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2000);document.querySelectorAll('.btn-ghost').forEach(b=>{if(b.textContent.includes('复制')||b.textContent.includes('351477')){b.classList.add('copied');const o=b.textContent;b.textContent='已复制';setTimeout(()=>{b.classList.remove('copied');b.textContent=o},2000)}})})}
 </script>
 </body>
