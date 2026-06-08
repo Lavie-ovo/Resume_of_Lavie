@@ -142,6 +142,19 @@
     .tag { background: #fff; border: 1px solid var(--border); padding: 6px 14px; border-radius: 20px; font-size: .88rem; font-weight: 500; color: var(--text-muted); }
     .tag.highlight { background: var(--accent-light); border-color: var(--accent); color: var(--accent); font-weight: 700; }
 
+    .email-copy { display: flex; align-items: center; gap: 10px; }
+    .email-text { font-size: .95rem; color: var(--text-muted); font-weight: 500; }
+    .btn-copy { padding: 9px 18px; font-size: .88rem; }
+    .btn-copy.copied { background: #f0fff4; border-color: #48bb78; color: #38a169; }
+
+    .toast {
+      position: fixed; bottom: 32px; left: 50%; transform: translateX(-50%);
+      background: #1a202c; color: #fff; padding: 10px 24px;
+      border-radius: 6px; font-size: .88rem; font-weight: 600;
+      opacity: 0; transition: opacity .3s; z-index: 999; pointer-events: none;
+    }
+    .toast.show { opacity: 1; }
+
     /* ===== Footer ===== */
     footer {
       background: var(--primary); color: rgba(255,255,255,.75);
@@ -197,7 +210,10 @@
     <p class="school"><span>哈尔滨工程大学</span> · 光电信息科学与工程 本科在读</p>
     <div class="hero-actions">
       <a href="resume.pdf" class="btn btn-primary" download="马一丹_机械结构实习生_简历.pdf">📄 下载简历 PDF</a>
-      <a href="mailto:3514776103@qq.com" class="btn btn-outline">✉️ 发送邮件</a>
+      <div class="email-copy">
+      <span class="email-text">📧 3514776103@qq.com</span>
+      <button class="btn btn-outline btn-copy" onclick="copyEmail()">📋 复制</button>
+    </div>
     </div>
   </div>
 </section>
@@ -317,5 +333,23 @@
   <p class="note">哈尔滨工程大学 · 光电信息科学与工程 · 2024 级本科</p>
 </footer>
 
+<div id="toast" class="toast">✅ 已复制到剪贴板</div>
+
+<script>
+function copyEmail() {
+  navigator.clipboard.writeText('3514776103@qq.com').then(() => {
+    const btn = document.querySelector('.btn-copy');
+    const toast = document.getElementById('toast');
+    btn.textContent = '✅ 已复制';
+    btn.classList.add('copied');
+    toast.classList.add('show');
+    setTimeout(() => {
+      btn.textContent = '📋 复制';
+      btn.classList.remove('copied');
+      toast.classList.remove('show');
+    }, 2000);
+  });
+}
+</script>
 </body>
 </html>
