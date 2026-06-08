@@ -100,9 +100,7 @@
     .skill-cat h4{font-size:.7rem;color:var(--ink-3);text-transform:uppercase;letter-spacing:.12em;margin-bottom:8px;font-weight:600}
     .skill-tags{display:flex;flex-wrap:wrap;gap:7px}
     .skill-tag{padding:6px 15px;border-radius:16px;font-size:.8rem;font-weight:500;cursor:pointer;background:transparent;color:var(--ink-2);border:1px solid var(--rule);transition:all .25s;font-family:inherit}
-    .skill-tag.primary{font-weight:600}
     .skill-tag:hover,.skill-tag.hovered{background:var(--accent);color:#fff;border-color:var(--accent);transform:translateY(-1px)}
-    .skill-tag.primary:hover,.skill-tag.primary.hovered{background:var(--accent-warm);border-color:var(--accent-warm);color:#fff}
     .skills-right{width:44%;flex-shrink:0;background:var(--paper-2);border-radius:4px;display:flex;align-items:center;justify-content:center;min-height:340px;position:relative;overflow:hidden}
     .skills-right img{width:100%;height:100%;object-fit:contain;padding:20px;transition:opacity .35s ease;position:absolute;inset:0;max-height:100%}
     .skills-right .hint{color:var(--ink-3);font-size:.78rem;position:absolute;pointer-events:none;text-align:center;line-height:1.6;z-index:1}
@@ -270,9 +268,9 @@
 <div class="tab-panel" id="tab-skills">
   <div class="skills-wrap">
     <div class="skills-left">
-      <div class="skill-cat"><h4>CAD 建模</h4><div class="skill-tags"><span class="skill-tag primary" data-img="images/car-sw.jpg">SolidWorks</span><span class="skill-tag">Fusion 360</span><span class="skill-tag" data-img="images/car-sketch.jpg">3D 建模</span><span class="skill-tag" data-img="images/car-sw.jpg">运动仿真</span><span class="skill-tag" data-img="images/car-sketch.jpg">工程图出图</span></div></div>
-      <div class="skill-cat"><h4>仿真分析</h4><div class="skill-tags"><span class="skill-tag primary" data-img="images/ansys-1.jpg">Ansys Workbench</span><span class="skill-tag" data-img="images/ansys-2.jpg">静力学分析</span><span class="skill-tag" data-img="images/ansys-2.jpg">模态分析</span><span class="skill-tag" data-img="images/ansys-1.jpg">拓扑优化</span><span class="skill-tag" data-img="images/ansys-1.jpg">强度校核</span></div></div>
-      <div class="skill-cat"><h4>设计与语言</h4><div class="skill-tags"><span class="skill-tag primary" data-img="images/cet6.jpg">CET-6 577</span><span class="skill-tag primary" data-img="images/merch-2.jpg">Photoshop</span><span class="skill-tag" data-img="images/merch-1.jpg">周边设计</span><span class="skill-tag" data-img="images/english-talk.jpg">英文交流</span></div></div>
+      <div class="skill-cat"><h4>CAD 建模</h4><div class="skill-tags"><span class="skill-tag" data-img="images/car-sw.jpg">SolidWorks</span><span class="skill-tag">Fusion 360</span><span class="skill-tag" data-img="images/car-sketch.jpg">3D 建模</span><span class="skill-tag" data-img="images/car-sw.jpg">运动仿真</span><span class="skill-tag" data-img="images/car-sketch.jpg">工程图出图</span></div></div>
+      <div class="skill-cat"><h4>仿真分析</h4><div class="skill-tags"><span class="skill-tag" data-img="images/ansys-1.jpg">Ansys Workbench</span><span class="skill-tag" data-img="images/ansys-2.jpg">静力学分析</span><span class="skill-tag" data-img="images/ansys-2.jpg">模态分析</span><span class="skill-tag" data-img="images/ansys-1.jpg">拓扑优化</span><span class="skill-tag" data-img="images/ansys-1.jpg">强度校核</span></div></div>
+      <div class="skill-cat"><h4>设计与语言</h4><div class="skill-tags"><span class="skill-tag" data-img="images/cet6.jpg">CET-6 577</span><span class="skill-tag" data-img="images/merch-2.jpg">Photoshop</span><span class="skill-tag" data-img="images/merch-1.jpg">周边设计</span><span class="skill-tag" data-img="images/english-talk.jpg">英文交流</span></div></div>
       <div class="skill-cat"><h4>其他</h4><div class="skill-tags"><span class="skill-tag">Office 套件</span><span class="skill-tag">BOM 清单整理</span><span class="skill-tag">技术文档撰写</span><span class="skill-tag">CNC / 3D 打印</span><span class="skill-tag">发明专利 ×1</span></div></div>
     </div>
     <div class="skills-right" id="skillPreview"><span class="hint" id="skillHint">将鼠标移到技能标签上<br>查看对应图片</span><img src="" alt="" id="skillImg" style="opacity:0"></div>
