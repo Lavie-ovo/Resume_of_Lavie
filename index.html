@@ -3,227 +3,174 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="马一丹 — 机械结构实习生 | 哈尔滨工程大学 光电信息科学与工程">
-  <title>马一丹 · 机械结构实习生</title>
+  <meta name="description" content="马一丹 — 机械结构 / 产品经理 / 运营项目管理 实习生 | 哈尔滨工程大学">
+  <title>马一丹 · 个人简历</title>
   <style>
-    /* ===== Variables ===== */
     :root {
-      --accent: #3b6b9e;
-      --accent-light: #eaf1f7;
-      --accent-dark: #2d5682;
-      --bg: #fafaf9;
-      --card: #fff;
-      --text: #171717;
-      --text-2: #525252;
-      --text-3: #8c8c8c;
-      --border: #e8e8e6;
+      --accent: #3b6b9e; --accent-light: #eaf1f7; --accent-dark: #2d5682;
+      --bg: #fafaf9; --card: #fff; --text: #171717; --text-2: #525252;
+      --text-3: #8c8c8c; --border: #e8e8e6;
       --shadow-sm: 0 1px 3px rgba(0,0,0,.05);
       --shadow: 0 2px 12px rgba(0,0,0,.06);
       --radius: 8px;
     }
-
-    /* ===== Reset ===== */
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth}
     body{
       font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",sans-serif;
-      color:var(--text);background:var(--bg);line-height:1.75;
-      -webkit-font-smoothing:antialiased;
+      color:var(--text);background:var(--bg);line-height:1.65;
+      -webkit-font-smoothing:antialiased;height:100vh;overflow:hidden;display:flex;flex-direction:column;
     }
-    a{color:inherit;text-decoration:none}
-    img{display:block;max-width:100%}
+    a{color:inherit;text-decoration:none}img{display:block;max-width:100%}
 
     /* ===== Header ===== */
     header{
-      position:sticky;top:0;z-index:100;
+      flex-shrink:0;position:sticky;top:0;z-index:100;
       background:rgba(255,255,255,.88);backdrop-filter:blur(12px);
       border-bottom:1px solid var(--border);
     }
     .header-inner{
-      max-width:960px;margin:0 auto;padding:0 32px;
-      display:flex;align-items:center;justify-content:space-between;
-      height:56px;position:relative;
+      max-width:1060px;margin:0 auto;padding:0 32px;
+      display:flex;align-items:center;justify-content:space-between;height:48px;
     }
-    .brand{font-weight:700;font-size:1.05rem;color:var(--text);white-space:nowrap;letter-spacing:.02em;}
-    .brand span{font-weight:400;color:var(--text-3);margin-left:8px;font-size:.85rem;}
-    .nav-tabs{display:flex;gap:0;list-style:none;position:relative;}
+    .brand{font-weight:700;font-size:.95rem;white-space:nowrap;letter-spacing:.02em}
+    .brand span{font-weight:400;color:var(--text-3);margin-left:6px;font-size:.78rem}
+    .nav-tabs{display:flex;gap:0;list-style:none;position:relative}
     .nav-tabs button{
-      padding:18px 18px;border:none;background:none;
-      font-size:.88rem;color:var(--text-3);cursor:pointer;
-      font-family:inherit;transition:color .2s;white-space:nowrap;
-      font-weight:500;position:relative;
+      padding:14px 16px;border:none;background:none;
+      font-size:.84rem;color:var(--text-3);cursor:pointer;
+      font-family:inherit;transition:color .2s;white-space:nowrap;font-weight:500;
     }
     .nav-tabs button:hover{color:var(--text-2)}
     .nav-tabs button.active{color:var(--text);font-weight:600}
     .tab-indicator{
-      position:absolute;bottom:0;height:2px;
-      background:var(--accent);border-radius:1px;
+      position:absolute;bottom:0;height:2px;background:var(--accent);border-radius:1px;
       transition:left .3s cubic-bezier(.4,0,.2,1),width .3s cubic-bezier(.4,0,.2,1);
     }
 
     /* ===== Main ===== */
-    main{max-width:780px;margin:0 auto;padding:48px 32px 80px}
-
-    .tab-content{display:none}
-    .tab-content.active{display:block;animation:fadeIn .4s ease both}
-    @keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
-
-    /* ===== Card ===== */
-    .card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow-sm);border:1px solid var(--border);overflow:hidden}
-
-    /* ===== About ===== */
-    .about-top{display:flex;gap:36px;align-items:flex-start;margin-bottom:28px}
-    .portrait{
-      width:160px;height:160px;border-radius:50%;object-fit:cover;
-      flex-shrink:0;box-shadow:var(--shadow);
+    main{
+      flex:1;overflow:hidden;display:flex;align-items:stretch;
+      max-width:1060px;margin:0 auto;width:100%;padding:20px 32px;
     }
-    .about-info h1{font-size:1.7rem;font-weight:700;letter-spacing:.04em;margin-bottom:4px}
-    .about-info .role{font-size:.95rem;color:var(--text-2);margin-bottom:2px}
-    .about-info .school-line{font-size:.88rem;color:var(--text-3);margin-bottom:18px}
+    .tab-content{display:none;width:100%;align-self:center}
+    .tab-content.active{display:block;animation:fadeIn .35s ease both}
+    @keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+    .card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow-sm);border:1px solid var(--border);overflow:hidden;padding:28px}
+
+    /* ===== About Tab ===== */
+    .about-row{display:flex;gap:32px;align-items:center}
+    .portrait{width:130px;height:130px;border-radius:50%;object-fit:cover;flex-shrink:0;box-shadow:var(--shadow)}
+    .about-info{flex:1;min-width:0}
+    .about-info h1{font-size:1.5rem;font-weight:700;letter-spacing:.03em}
+    .about-info .roles{font-size:.88rem;color:var(--accent);font-weight:600;margin-bottom:2px}
+    .about-info .school-line{font-size:.84rem;color:var(--text-3);margin-bottom:12px}
     .about-info .school-line strong{color:var(--text-2);font-weight:600}
-    .about-intro{font-size:.92rem;color:var(--text-2);line-height:1.85;margin-bottom:20px}
-    .about-actions{display:flex;gap:10px;flex-wrap:wrap}
-    .btn{
-      display:inline-flex;align-items:center;gap:6px;
-      padding:9px 18px;border-radius:6px;font-size:.85rem;
-      font-weight:600;cursor:pointer;transition:all .2s;font-family:inherit;
-    }
+    .about-info .intro{font-size:.85rem;color:var(--text-2);line-height:1.7;margin-bottom:14px}
+    .about-actions{display:flex;gap:8px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:5px;padding:7px 16px;border-radius:5px;font-size:.82rem;font-weight:600;cursor:pointer;transition:all .2s;font-family:inherit}
     .btn-primary{background:var(--accent);color:#fff;border:none}
     .btn-primary:hover{background:var(--accent-dark)}
     .btn-outline{background:transparent;color:var(--text-2);border:1px solid var(--border)}
     .btn-outline:hover{border-color:var(--accent);color:var(--accent)}
     .btn-outline.copied{background:#f0faf4;border-color:#4caf7c;color:#2d8a4e}
+    .honor-strip{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap}
+    .honor-item{display:flex;align-items:center;gap:8px;padding:7px 14px;background:#f8f9fb;border-radius:20px;font-size:.82rem;color:var(--text-2);font-weight:500;border:1px solid transparent}
+    .honor-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0}
+    .honor-dot.gold{background:#c9a44b}
+    .honor-dot.blue{background:var(--accent)}
 
-    .highlights-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:20px}
-    .hl-item{
-      display:flex;align-items:center;gap:10px;padding:14px 18px;
-      background:#f8f9fb;border-radius:var(--radius);font-size:.9rem;color:var(--text-2);
-      border:1px solid transparent;
-    }
-    .hl-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
-    .hl-dot.gold{background:#c9a44b}
-    .hl-dot.blue{background:var(--accent)}
-    .hl-item strong{color:var(--text)}
-
-    /* ===== Education ===== */
-    .edu-header{margin-bottom:20px}
-    .edu-header .school{font-size:1.25rem;font-weight:700;display:flex;align-items:baseline;gap:10px}
-    .badge{
-      font-size:.7rem;font-weight:600;color:var(--accent);
-      background:var(--accent-light);padding:3px 10px;border-radius:20px;letter-spacing:.04em;
-    }
-    .edu-header .meta{font-size:.88rem;color:var(--text-3);margin-top:4px}
-    .edu-pills{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:24px}
-    .pill{
-      display:flex;align-items:center;gap:7px;padding:8px 15px;
-      background:#f8f9fb;border-radius:20px;font-size:.86rem;color:var(--text-2);font-weight:500;
-    }
-    .pill .dot{width:6px;height:6px;border-radius:50%}
+    /* ===== Education Tab ===== */
+    .edu-row{display:flex;gap:28px;align-items:flex-start}
+    .edu-main{flex:1}
+    .edu-main .school{font-size:1.15rem;font-weight:700;display:flex;align-items:baseline;gap:8px;margin-bottom:4px}
+    .badge{font-size:.68rem;font-weight:600;color:var(--accent);background:var(--accent-light);padding:2px 8px;border-radius:20px;letter-spacing:.04em}
+    .edu-main .meta{font-size:.84rem;color:var(--text-3);margin-bottom:14px}
+    .edu-main .meta strong{color:var(--text);font-weight:600}
+    .pill-row{display:flex;flex-wrap:wrap;gap:8px}
+    .pill{display:flex;align-items:center;gap:6px;padding:6px 13px;background:#f8f9fb;border-radius:20px;font-size:.82rem;color:var(--text-2);font-weight:500}
+    .pill .dot{width:5px;height:5px;border-radius:50%}
     .pill .dot.gold{background:#c9a44b}
     .pill .dot.blue{background:var(--accent)}
-    .score-cards{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-    .score-card{text-align:center;padding:16px;background:#f8f9fb;border-radius:var(--radius)}
-    .score-card img{width:100%;border-radius:4px;margin-bottom:8px;box-shadow:0 1px 4px rgba(0,0,0,.08)}
-    .score-card .label{font-size:.82rem;color:var(--text-3);font-weight:600}
+    .certs-col{display:flex;gap:10px;flex-shrink:0}
+    .cert-card{width:130px;text-align:center}
+    .cert-card img{width:100%;border-radius:4px;box-shadow:0 1px 4px rgba(0,0,0,.08);aspect-ratio:3/4;object-fit:cover}
+    .cert-card .lbl{font-size:.72rem;color:var(--text-3);margin-top:5px;font-weight:600}
 
-    /* ===== Projects ===== */
-    .proj-hero{position:relative;margin-bottom:0}
-    .proj-hero img{width:100%;max-height:380px;object-fit:cover}
-    .proj-hero .overlay{
-      position:absolute;bottom:0;left:0;right:0;
-      padding:28px 32px;background:linear-gradient(transparent,rgba(0,0,0,.6));
-      color:#fff;
-    }
-    .proj-hero .overlay h3{font-size:1.2rem;font-weight:700;margin-bottom:2px}
-    .proj-hero .overlay .sub{font-size:.85rem;opacity:.9}
-    .proj-body{padding:28px 32px}
-    .proj-body .desc{font-size:.92rem;color:var(--text-2);margin-bottom:24px;line-height:1.85}
-    .proj-module{margin-bottom:22px;display:grid;grid-template-columns:1fr 180px;gap:20px;align-items:start}
-    .proj-module:last-child{margin-bottom:0}
-    .proj-module .text h4{font-size:.95rem;font-weight:700;margin-bottom:6px}
-    .proj-module .text li{font-size:.88rem;color:var(--text-2);margin-bottom:4px;list-style:none;position:relative;padding-left:14px}
-    .proj-module .text li::before{content:'—';position:absolute;left:0;color:var(--text-3)}
-    .proj-module .thumb{
-      width:100%;border-radius:6px;box-shadow:var(--shadow-sm);
-      object-fit:cover;aspect-ratio:4/3;
-    }
-    .proj-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px;padding-top:16px;border-top:1px solid var(--border)}
-    .proj-gallery img{width:100%;border-radius:6px;aspect-ratio:4/3;object-fit:cover;box-shadow:var(--shadow-sm);transition:transform .25s}
-    .proj-gallery img:hover{transform:scale(1.03)}
+    /* ===== Projects Tab ===== */
+    .proj-layout{display:flex;gap:24px}
+    .proj-hero-col{flex-shrink:0;width:320px}
+    .proj-hero-col img{width:100%;border-radius:6px;box-shadow:var(--shadow-sm)}
+    .proj-hero-col .caption{font-size:.78rem;color:var(--text-3);margin-top:8px;text-align:center}
+    .proj-content{flex:1;min-width:0}
+    .proj-content h3{font-size:1.1rem;font-weight:700;margin-bottom:2px}
+    .proj-content .meta-line{font-size:.82rem;color:var(--accent);font-weight:600;margin-bottom:12px}
+    .proj-modules{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
+    .pmod h4{font-size:.85rem;font-weight:700;margin-bottom:6px}
+    .pmod li{font-size:.8rem;color:var(--text-2);margin-bottom:3px;list-style:none;position:relative;padding-left:12px;line-height:1.55}
+    .pmod li::before{content:'—';position:absolute;left:0;color:var(--text-3)}
+    .proj-thumbs{display:flex;gap:10px;margin-top:16px;padding-top:14px;border-top:1px solid var(--border)}
+    .proj-thumbs img{width:90px;height:68px;object-fit:cover;border-radius:4px;box-shadow:0 1px 3px rgba(0,0,0,.08);transition:transform .2s;cursor:pointer}
+    .proj-thumbs img:hover{transform:scale(1.05)}
 
-    /* ===== Skills ===== */
-    .skill-cat{margin-bottom:28px}
+    /* ===== Skills Tab ===== */
+    .skills-layout{display:flex;gap:28px;align-items:flex-start}
+    .skills-tags-col{flex:1;min-width:0}
+    .skill-cat{margin-bottom:18px}
     .skill-cat:last-child{margin-bottom:0}
-    .skill-cat h4{
-      font-size:.78rem;color:var(--text-3);text-transform:uppercase;
-      letter-spacing:.1em;margin-bottom:10px;font-weight:600;
-    }
-    .skill-tags{display:flex;flex-wrap:wrap;gap:8px}
-    .skill-tag{
-      padding:7px 16px;border-radius:20px;font-size:.86rem;font-weight:500;
-      background:#f4f6f9;color:var(--text-2);cursor:pointer;transition:all .2s;
-      border:1px solid transparent;font-family:inherit;
-    }
-    .skill-tag:hover,.skill-tag.hovered{background:var(--accent-light);color:var(--accent-dark);border-color:var(--accent);transform:translateY(-1px)}
+    .skill-cat h4{font-size:.74rem;color:var(--text-3);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px;font-weight:600}
+    .skill-tags{display:flex;flex-wrap:wrap;gap:7px}
+    .skill-tag{padding:6px 14px;border-radius:18px;font-size:.82rem;font-weight:500;background:#f4f6f9;color:var(--text-2);cursor:pointer;transition:all .2s;border:1px solid transparent;font-family:inherit}
+    .skill-tag:hover,.skill-tag.hovered{background:var(--accent-light);color:var(--accent-dark);border-color:var(--accent)}
     .skill-tag.primary{background:var(--accent-light);color:var(--accent-dark);font-weight:700;border-color:var(--accent)}
+    .skill-preview-col{width:360px;flex-shrink:0;background:#f4f6f9;border-radius:var(--radius);overflow:hidden;display:flex;align-items:center;justify-content:center;min-height:260px;position:relative}
+    .skill-preview-col img{width:100%;height:100%;object-fit:contain;transition:opacity .35s ease;max-height:280px}
+    .skill-preview-col .placeholder{color:var(--text-3);font-size:.82rem;position:absolute;pointer-events:none;text-align:center}
 
-    .skill-preview{
-      margin-top:28px;position:relative;border-radius:var(--radius);overflow:hidden;
-      background:#f4f6f9;min-height:200px;display:flex;align-items:center;justify-content:center;
-    }
-    .skill-preview img{
-      width:100%;max-height:320px;object-fit:contain;
-      transition:opacity .35s ease;
-    }
-    .skill-preview .placeholder{
-      color:var(--text-3);font-size:.88rem;
-      position:absolute;pointer-events:none;
-    }
-
-    /* ===== Explore ===== */
-    .explore-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-    .explore-card{
-      border-radius:var(--radius);overflow:hidden;background:var(--card);
-      box-shadow:var(--shadow-sm);border:1px solid var(--border);transition:transform .25s;
-    }
-    .explore-card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+    /* ===== Explore Tab ===== */
+    .explore-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .explore-card{border-radius:var(--radius);overflow:hidden;background:var(--card);box-shadow:var(--shadow-sm);border:1px solid var(--border);transition:transform .25s}
+    .explore-card:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
     .explore-card img{width:100%;aspect-ratio:3/2;object-fit:cover}
-    .explore-card .info{padding:14px 16px}
-    .explore-card .info h4{font-size:.88rem;font-weight:700;margin-bottom:2px}
-    .explore-card .info p{font-size:.8rem;color:var(--text-3);line-height:1.5}
+    .explore-card .info{padding:10px 14px}
+    .explore-card .info h4{font-size:.84rem;font-weight:700;margin-bottom:1px}
+    .explore-card .info p{font-size:.76rem;color:var(--text-3);line-height:1.4}
 
     /* ===== Toast ===== */
-    .toast{
-      position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(20px);
-      background:#171717;color:#fff;padding:10px 24px;border-radius:6px;
-      font-size:.85rem;font-weight:600;opacity:0;transition:all .3s ease;
-      z-index:999;pointer-events:none;
-    }
+    .toast{position:fixed;bottom:28px;left:50%;transform:translateX(-50%) translateY(20px);background:#171717;color:#fff;padding:9px 22px;border-radius:6px;font-size:.82rem;font-weight:600;opacity:0;transition:all .3s ease;z-index:999;pointer-events:none}
     .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
 
     /* ===== Responsive ===== */
-    @media(max-width:768px){
-      .header-inner{flex-direction:column;height:auto;padding:12px 16px;gap:8px}
-      .nav-tabs button{padding:10px 12px;font-size:.8rem}
-      .about-top{flex-direction:column;align-items:center;text-align:center}
-      .portrait{width:130px;height:130px}
+    @media(max-width:900px){
+      body{height:auto;overflow:auto}
+      main{flex:auto;overflow:visible;padding:20px 16px;align-items:flex-start}
+      .tab-content{align-self:auto}
+      .header-inner{flex-direction:column;height:auto;padding:10px 16px;gap:6px}
+      .nav-tabs button{padding:8px 10px;font-size:.76rem}
+      .about-row{flex-direction:column;align-items:center;text-align:center}
       .about-actions{justify-content:center}
-      .highlights-grid{grid-template-columns:1fr}
-      .score-cards{grid-template-columns:1fr}
-      .proj-module{grid-template-columns:1fr}
-      .proj-module .thumb{max-width:200px}
-      .proj-gallery{grid-template-columns:repeat(2,1fr)}
+      .honor-strip{justify-content:center}
+      .edu-row{flex-direction:column}
+      .certs-col{flex-direction:row;flex-wrap:wrap;justify-content:center}
+      .cert-card{width:100px}
+      .proj-layout{flex-direction:column}
+      .proj-hero-col{width:100%}
+      .proj-hero-col img{max-height:200px;object-fit:cover;width:100%}
+      .proj-modules{grid-template-columns:1fr}
+      .skills-layout{flex-direction:column}
+      .skill-preview-col{width:100%;min-height:200px}
+      .explore-grid{grid-template-columns:1fr 1fr}
+    }
+    @media(max-width:480px){
       .explore-grid{grid-template-columns:1fr}
-      main{padding:32px 16px 64px}
+      .proj-thumbs img{width:70px;height:52px}
     }
   </style>
 </head>
 <body>
 
-<!-- Header -->
 <header>
   <div class="header-inner">
-    <div class="brand">马一丹<span>· 机械结构实习生</span></div>
+    <div class="brand">马一丹<span>· 机械结构 / 产品经理 / 运营项目管理</span></div>
     <nav class="nav-tabs" id="navTabs">
       <button class="active" data-tab="about">关于我</button>
       <button data-tab="education">教育背景</button>
@@ -235,60 +182,53 @@
   </div>
 </header>
 
-<!-- Main -->
 <main>
 
 <!-- ====== 关于我 ====== -->
 <div class="tab-content active" id="tab-about">
-  <div class="card" style="padding:36px">
-    <div class="about-top">
+  <div class="card">
+    <div class="about-row">
       <img src="images/portrait.jpg" alt="马一丹" class="portrait">
       <div class="about-info">
         <h1>马一丹</h1>
-        <p class="role">机械结构实习生</p>
+        <p class="roles">机械结构实习生 · 产品经理实习生 · 运营 / 项目管理实习生</p>
         <p class="school-line"><strong>哈尔滨工程大学</strong>（211 / 双一流）· 光电信息科学与工程 本科在读 · 专业排名 <strong>前 10%</strong></p>
-        <p class="about-intro">
-          对机器人设计全流程有深入理解，从机械构型到跨方向联调都有实操经验。
-          习惯在项目推进中不断复盘反思——遇到问题先定位根因再调整方案，而非盲目推进。
-          善于跨方向沟通，RoboMaster 期间与电控、硬件同学紧密配合，知道「机械改一个尺寸，电控和硬件要跟着变什么」。
-        </p>
+        <p class="intro">对机器人设计全流程有深入理解，从机械构型到跨方向联调都有实操经验。善于跨方向沟通，习惯在项目推进中不断复盘反思——先定位根因再调整方案，不把问题留到下次。</p>
         <div class="about-actions">
           <a href="resume.pdf" class="btn btn-primary" download="马一丹_机械结构实习生_简历.pdf">📄 下载简历 PDF</a>
-          <button class="btn btn-outline" id="emailBtn1" onclick="copyEmail()">📧 3514776103@qq.com</button>
-          <button class="btn btn-outline" onclick="copyEmail()">📋 复制邮箱</button>
+          <button class="btn btn-outline" onclick="copyEmail()">📧 3514776103@qq.com</button>
+          <button class="btn btn-outline" id="copyBtn" onclick="copyEmail()">📋 复制邮箱</button>
         </div>
       </div>
     </div>
-    <div class="highlights-grid">
-      <div class="hl-item"><span class="hl-dot gold"></span><strong>2025 年度国家奖学金</strong></div>
-      <div class="hl-item"><span class="hl-dot gold"></span><strong>2025 年度黑龙江省三好学生</strong></div>
-      <div class="hl-item"><span class="hl-dot blue"></span>多次<strong>校级一等奖学金</strong></div>
-      <div class="hl-item"><span class="hl-dot blue"></span><strong>校级优秀团干部</strong></div>
+    <div class="honor-strip">
+      <div class="honor-item"><span class="honor-dot gold"></span><strong>2025 年度国家奖学金</strong></div>
+      <div class="honor-item"><span class="honor-dot gold"></span><strong>2025 年度黑龙江省三好学生</strong></div>
+      <div class="honor-item"><span class="honor-dot blue"></span>多次<strong>校级一等奖学金</strong></div>
+      <div class="honor-item"><span class="honor-dot blue"></span><strong>校级优秀团干部</strong></div>
     </div>
   </div>
 </div>
 
 <!-- ====== 教育背景 ====== -->
 <div class="tab-content" id="tab-education">
-  <div class="card" style="padding:36px">
-    <div class="edu-header">
-      <div class="school">哈尔滨工程大学<span class="badge">211 / 双一流</span></div>
-      <p class="meta">光电信息科学与工程 · 本科 | 专业排名 <strong style="color:var(--text)">前 10%</strong> | 2024.09 至今</p>
-    </div>
-    <div class="edu-pills">
-      <div class="pill"><span class="dot gold"></span><strong>2025 年度国家奖学金</strong></div>
-      <div class="pill"><span class="dot gold"></span><strong>2025 年度黑龙江省三好学生</strong></div>
-      <div class="pill"><span class="dot blue"></span>多次校级一等奖学金</div>
-      <div class="pill"><span class="dot blue"></span>校级优秀团干部</div>
-    </div>
-    <div class="score-cards">
-      <div class="score-card">
-        <img src="images/cet6.jpg" alt="六级成绩单" loading="lazy">
-        <p class="label">CET-6 · 577 分</p>
+  <div class="card">
+    <div class="edu-row">
+      <div class="edu-main">
+        <div class="school">哈尔滨工程大学<span class="badge">211 / 双一流</span></div>
+        <p class="meta">光电信息科学与工程 · 本科 &nbsp;|&nbsp; 专业排名 <strong>前 10%</strong> &nbsp;|&nbsp; 2024.09 至今</p>
+        <div class="pill-row">
+          <div class="pill"><span class="dot gold"></span><strong>2025 年度国家奖学金</strong></div>
+          <div class="pill"><span class="dot gold"></span><strong>2025 年度黑龙江省三好学生</strong></div>
+          <div class="pill"><span class="dot blue"></span>多次校级一等奖学金</div>
+          <div class="pill"><span class="dot blue"></span>校级优秀团干部</div>
+        </div>
       </div>
-      <div class="score-card">
-        <img src="images/cet4.jpg" alt="四级成绩单" loading="lazy">
-        <p class="label">CET-4</p>
+      <div class="certs-col">
+        <div class="cert-card"><img src="images/honor-national.jpg" alt="国家奖学金"><p class="lbl">国家奖学金</p></div>
+        <div class="cert-card"><img src="images/honor-pro.jpg" alt="省三好学生"><p class="lbl">省三好学生</p></div>
+        <div class="cert-card"><img src="images/cet6.jpg" alt="六级成绩单"><p class="lbl">CET-6 577</p></div>
+        <div class="cert-card"><img src="images/cet4.jpg" alt="四级成绩单"><p class="lbl">CET-4</p></div>
       </div>
     </div>
   </div>
@@ -297,48 +237,40 @@
 <!-- ====== 项目经历 ====== -->
 <div class="tab-content" id="tab-projects">
   <div class="card">
-    <div class="proj-hero">
-      <img src="images/car-real.jpg" alt="RoboMaster 工程机器人">
-      <div class="overlay">
+    <div class="proj-layout">
+      <div class="proj-hero-col">
+        <img src="images/car-real.jpg" alt="RoboMaster 工程机器人">
+        <p class="caption">RoboMaster 工程机器人实物</p>
+      </div>
+      <div class="proj-content">
         <h3>全国大学生机器人大赛 RoboMaster</h3>
-        <p class="sub">工程组组长 & 运营经理 · 2025.09 – 2026.06</p>
-      </div>
-    </div>
-    <div class="proj-body">
-      <p class="desc">队伍从零组建，同时承担<strong>技术方向</strong>和<strong>团队运营</strong>两条线。</p>
-
-      <div class="proj-module">
-        <div class="text">
-          <h4>🔧 机械设计</h4>
-          <li>独立完成工程机器人<strong>七自由度码垛机械臂</strong>与舵轮底盘的构型设计</li>
-          <li>使用 SolidWorks 完成 3D 建模、运动仿真、整机装配与干涉检查</li>
-          <li>使用 Ansys Workbench 对关键承力件做强度校核与拓扑优化</li>
+        <p class="meta-line">工程组组长 & 运营经理 · 2025.09 – 2026.06</p>
+        <div class="proj-modules">
+          <div class="pmod">
+            <h4>🔧 机械设计</h4>
+            <li>独立完成<strong>七自由度码垛机械臂</strong>与舵轮底盘构型设计</li>
+            <li>SolidWorks 3D 建模、运动仿真与干涉检查</li>
+            <li>Ansys Workbench 强度校核与拓扑优化</li>
+          </div>
+          <div class="pmod">
+            <h4>🤝 跨方向统筹</h4>
+            <li>协同机械、电控、硬件三方向，制定项目节点</li>
+            <li>推动方案设计→加工装配→整机联调全流程</li>
+          </div>
+          <div class="pmod">
+            <h4>🏆 赛事运营</h4>
+            <li>主导校内选拔赛，覆盖 <strong>1000+</strong> 参赛学生</li>
+            <li>赛程编排、场地协调、现场应急处理</li>
+          </div>
         </div>
-        <img src="images/car-sw.jpg" alt="SolidWorks 模型" class="thumb" loading="lazy">
-      </div>
-
-      <div class="proj-module">
-        <div class="text">
-          <h4>🤝 跨方向统筹</h4>
-          <li>协同机械、电控、硬件三个方向团队，制定项目节点和每周里程碑</li>
-          <li>推动整机联调按期交付，从设计方案到实车上场全流程跟进</li>
+        <div class="proj-thumbs">
+          <img src="images/car-sw.jpg" alt="SW模型" loading="lazy">
+          <img src="images/ansys-1.jpg" alt="Ansys分析" loading="lazy">
+          <img src="images/ansys-2.jpg" alt="Ansys优化" loading="lazy">
+          <img src="images/car-sketch.jpg" alt="线稿图" loading="lazy">
+          <img src="images/car-assembly.jpg" alt="组装" loading="lazy">
+          <img src="images/car-and-me.jpg" alt="赛场" loading="lazy">
         </div>
-        <img src="images/car-assembly.jpg" alt="车辆组装" class="thumb" loading="lazy">
-      </div>
-
-      <div class="proj-module">
-        <div class="text">
-          <h4>🏆 赛事运营</h4>
-          <li>主导校内选拔赛的组织工作，覆盖 1000+ 参赛学生</li>
-          <li>负责赛程编排、场地协调、人员调度和现场应急处理</li>
-        </div>
-        <img src="images/car-and-me.jpg" alt="赛场照片" class="thumb" loading="lazy">
-      </div>
-
-      <div class="proj-gallery">
-        <img src="images/car-sketch.jpg" alt="线稿图" loading="lazy">
-        <img src="images/ansys-1.jpg" alt="Ansys 分析" loading="lazy">
-        <img src="images/ansys-2.jpg" alt="Ansys 优化" loading="lazy">
       </div>
     </div>
   </div>
@@ -346,187 +278,102 @@
 
 <!-- ====== 技能特长 ====== -->
 <div class="tab-content" id="tab-skills">
-  <div class="card" style="padding:36px">
-    <div class="skill-cat">
-      <h4>🖥️ CAD 建模</h4>
-      <div class="skill-tags">
-        <span class="skill-tag primary" data-img="images/car-sw.jpg">SolidWorks</span>
-        <span class="skill-tag" data-img="images/car-sw.jpg">Fusion 360</span>
-        <span class="skill-tag" data-img="images/car-sketch.jpg">3D 建模</span>
-        <span class="skill-tag" data-img="images/car-sw.jpg">运动仿真</span>
-        <span class="skill-tag" data-img="images/car-sketch.jpg">工程图出图</span>
-        <span class="skill-tag" data-img="images/car-assembly.jpg">装配体设计</span>
+  <div class="card">
+    <div class="skills-layout">
+      <div class="skills-tags-col">
+        <div class="skill-cat">
+          <h4>🖥️ CAD 建模</h4>
+          <div class="skill-tags">
+            <span class="skill-tag primary" data-img="images/car-sw.jpg">SolidWorks</span>
+            <span class="skill-tag" data-img="images/car-sw.jpg">Fusion 360</span>
+            <span class="skill-tag" data-img="images/car-sketch.jpg">3D 建模</span>
+            <span class="skill-tag" data-img="images/car-sw.jpg">运动仿真</span>
+            <span class="skill-tag" data-img="images/car-sketch.jpg">工程图出图</span>
+          </div>
+        </div>
+        <div class="skill-cat">
+          <h4>📐 仿真分析</h4>
+          <div class="skill-tags">
+            <span class="skill-tag primary" data-img="images/ansys-1.jpg">Ansys Workbench</span>
+            <span class="skill-tag" data-img="images/ansys-1.jpg">静力学分析</span>
+            <span class="skill-tag" data-img="images/ansys-2.jpg">模态分析</span>
+            <span class="skill-tag" data-img="images/ansys-1.jpg">拓扑优化</span>
+            <span class="skill-tag" data-img="images/ansys-1.jpg">强度校核</span>
+          </div>
+        </div>
+        <div class="skill-cat">
+          <h4>🎨 设计与语言</h4>
+          <div class="skill-tags">
+            <span class="skill-tag primary" data-img="images/cet6.jpg">CET-6 577 分</span>
+            <span class="skill-tag primary" data-img="images/merch-2.jpg">Photoshop</span>
+            <span class="skill-tag" data-img="images/merch-1.jpg">周边设计</span>
+            <span class="skill-tag" data-img="images/english-talk.jpg">英文交流</span>
+          </div>
+        </div>
+        <div class="skill-cat">
+          <h4>📋 其他</h4>
+          <div class="skill-tags">
+            <span class="skill-tag">Office 套件</span>
+            <span class="skill-tag">BOM 清单整理</span>
+            <span class="skill-tag">技术文档撰写</span>
+            <span class="skill-tag">CNC / 3D 打印</span>
+            <span class="skill-tag">发明专利 ×1</span>
+          </div>
+        </div>
       </div>
-    </div>
-
-    <div class="skill-cat">
-      <h4>📐 仿真分析</h4>
-      <div class="skill-tags">
-        <span class="skill-tag primary" data-img="images/ansys-1.jpg">Ansys Workbench</span>
-        <span class="skill-tag" data-img="images/ansys-1.jpg">静力学分析</span>
-        <span class="skill-tag" data-img="images/ansys-2.jpg">模态分析</span>
-        <span class="skill-tag" data-img="images/ansys-1.jpg">拓扑优化</span>
-        <span class="skill-tag" data-img="images/ansys-1.jpg">强度校核</span>
+      <div class="skill-preview-col" id="skillPreview">
+        <span class="placeholder" id="skillPlaceholder">🖱️ 鼠标移到技能标签<br>查看对应图片</span>
+        <img src="" alt="" id="skillPreviewImg" style="opacity:0">
       </div>
-    </div>
-
-    <div class="skill-cat">
-      <h4>🎨 设计与语言</h4>
-      <div class="skill-tags">
-        <span class="skill-tag primary" data-img="images/cet6.jpg">CET-6 577 分</span>
-        <span class="skill-tag" data-img="images/merch-2.jpg">Photoshop</span>
-        <span class="skill-tag" data-img="images/english-talk.jpg">英文文献阅读</span>
-        <span class="skill-tag" data-img="images/english-talk.jpg">日常口语交流</span>
-        <span class="skill-tag" data-img="images/merch-1.jpg">周边设计</span>
-        <span class="skill-tag" data-img="images/merch-2.jpg">平面设计</span>
-      </div>
-    </div>
-
-    <div class="skill-cat">
-      <h4>📋 其他</h4>
-      <div class="skill-tags">
-        <span class="skill-tag">Office 套件</span>
-        <span class="skill-tag">BOM 清单整理</span>
-        <span class="skill-tag">技术文档撰写</span>
-        <span class="skill-tag">CNC / 3D 打印</span>
-        <span class="skill-tag">发明专利 ×1</span>
-      </div>
-    </div>
-
-    <div class="skill-preview" id="skillPreview">
-      <span class="placeholder" id="skillPlaceholder">🖱️ 将鼠标移到上方技能标签上查看相关图片</span>
-      <img src="" alt="" id="skillPreviewImg" style="opacity:0">
     </div>
   </div>
 </div>
 
 <!-- ====== 学习与探索 ====== -->
 <div class="tab-content" id="tab-explore">
-  <div class="card" style="padding:36px">
-    <p style="font-size:.92rem;color:var(--text-2);margin-bottom:24px;line-height:1.85">
-      课余时间保持对各领域的好奇与探索，从社团运营到志愿服务，从跨文化交流到知识分享。
-    </p>
+  <div class="card">
+    <p style="font-size:.85rem;color:var(--text-2);margin-bottom:16px;line-height:1.7">课余保持对各领域的好奇与探索，从社团运营到志愿服务，从跨文化交流到知识分享。</p>
     <div class="explore-grid">
-      <div class="explore-card">
-        <img src="images/club-defense.jpg" alt="十佳社团答辩" loading="lazy">
-        <div class="info"><h4>十佳社团答辩</h4><p>代表社团进行年度答辩展示</p></div>
-      </div>
-      <div class="explore-card">
-        <img src="images/club-award.jpg" alt="五四表彰" loading="lazy">
-        <div class="info"><h4>五四表彰大会</h4><p>社团荣获表彰</p></div>
-      </div>
-      <div class="explore-card">
-        <img src="images/volunteer-teach.jpg" alt="志愿讲解" loading="lazy">
-        <div class="info"><h4>科普志愿活动</h4><p>为小学生讲解机器人知识</p></div>
-      </div>
-      <div class="explore-card">
-        <img src="images/english-talk.jpg" alt="英语讲解" loading="lazy">
-        <div class="info"><h4>跨文化交流</h4><p>为外国友人进行英语讲解</p></div>
-      </div>
-      <div class="explore-card">
-        <img src="images/merch-1.jpg" alt="周边设计1" loading="lazy">
-        <div class="info"><h4>社团周边设计</h4><p>自主设计的社团文创产品</p></div>
-      </div>
-      <div class="explore-card">
-        <img src="images/merch-2.jpg" alt="周边设计2" loading="lazy">
-        <div class="info"><h4>平面设计作品</h4><p>使用 PS 完成多种设计</p></div>
-      </div>
+      <div class="explore-card"><img src="images/club-defense.jpg" alt="十佳社团答辩" loading="lazy"><div class="info"><h4>十佳社团答辩</h4><p>代表社团进行年度答辩</p></div></div>
+      <div class="explore-card"><img src="images/club-award.jpg" alt="五四表彰" loading="lazy"><div class="info"><h4>五四表彰大会</h4><p>社团荣获表彰</p></div></div>
+      <div class="explore-card"><img src="images/volunteer-teach.jpg" alt="志愿讲解" loading="lazy"><div class="info"><h4>科普志愿活动</h4><p>为小学生讲解机器人</p></div></div>
+      <div class="explore-card"><img src="images/english-talk.jpg" alt="英语讲解" loading="lazy"><div class="info"><h4>跨文化交流</h4><p>英语讲解机器人技术</p></div></div>
+      <div class="explore-card"><img src="images/merch-1.jpg" alt="周边设计1" loading="lazy"><div class="info"><h4>社团周边设计</h4><p>自主设计文创产品</p></div></div>
+      <div class="explore-card"><img src="images/merch-2.jpg" alt="周边设计2" loading="lazy"><div class="info"><h4>平面设计作品</h4><p>使用 PS 完成多种设计</p></div></div>
     </div>
   </div>
 </div>
 
 </main>
 
-<!-- Toast -->
 <div class="toast" id="toast">✅ 邮箱已复制到剪贴板</div>
 
 <script>
-// ===== Tab Switching =====
-const tabs = document.querySelectorAll('.nav-tabs button');
-const panels = document.querySelectorAll('.tab-content');
-const indicator = document.getElementById('indicator');
+const tabs=document.querySelectorAll('.nav-tabs button');
+const panels=document.querySelectorAll('.tab-content');
+const indicator=document.getElementById('indicator');
+function updateIndicator(el){indicator.style.left=el.offsetLeft+'px';indicator.style.width=el.offsetWidth+'px'}
+const active=document.querySelector('.nav-tabs button.active');
+if(active)updateIndicator(active);
+tabs.forEach(tab=>{tab.addEventListener('click',()=>{const t=tab.dataset.tab;tabs.forEach(b=>b.classList.remove('active'));panels.forEach(p=>p.classList.remove('active'));tab.classList.add('active');updateIndicator(tab);const panel=document.getElementById('tab-'+t);if(panel){panel.classList.add('active');panel.style.animation='none';panel.offsetHeight;panel.style.animation=''}})});
+window.addEventListener('resize',()=>{const a=document.querySelector('.nav-tabs button.active');if(a)updateIndicator(a)});
 
-function updateIndicator(el) {
-  indicator.style.left = el.offsetLeft + 'px';
-  indicator.style.width = el.offsetWidth + 'px';
-}
-
-// Init indicator
-const activeTab = document.querySelector('.nav-tabs button.active');
-if (activeTab) updateIndicator(activeTab);
-
-tabs.forEach(tab => {
-  tab.addEventListener('click', () => {
-    const target = tab.dataset.tab;
-    tabs.forEach(t => t.classList.remove('active'));
-    panels.forEach(p => p.classList.remove('active'));
-    tab.classList.add('active');
-    updateIndicator(tab);
-    const panel = document.getElementById('tab-' + target);
-    if (panel) {
-      panel.classList.add('active');
-      panel.style.animation = 'none';
-      panel.offsetHeight;
-      panel.style.animation = '';
-    }
-  });
-});
-
-// Resize handler for indicator
-window.addEventListener('resize', () => {
-  const active = document.querySelector('.nav-tabs button.active');
-  if (active) updateIndicator(active);
-});
-
-// ===== Skill Image Preview =====
-const previewImg = document.getElementById('skillPreviewImg');
-const placeholder = document.getElementById('skillPlaceholder');
-const skillTags = document.querySelectorAll('.skill-tag[data-img]');
-
-skillTags.forEach(tag => {
-  tag.addEventListener('mouseenter', () => {
-    const img = tag.dataset.img;
-    previewImg.src = img;
-    previewImg.style.opacity = '1';
-    placeholder.style.display = 'none';
-    skillTags.forEach(t => t.classList.remove('hovered'));
+// Skill preview
+const previewImg=document.getElementById('skillPreviewImg');
+const placeholder=document.getElementById('skillPlaceholder');
+document.querySelectorAll('.skill-tag[data-img]').forEach(tag=>{
+  tag.addEventListener('mouseenter',()=>{
+    previewImg.src=tag.dataset.img;previewImg.style.opacity='1';placeholder.style.display='none';
+    document.querySelectorAll('.skill-tag').forEach(t=>t.classList.remove('hovered'));
     tag.classList.add('hovered');
   });
-  tag.addEventListener('mouseleave', () => {
-    tag.classList.remove('hovered');
-    // Keep last image visible — don't hide
-  });
+  tag.addEventListener('mouseleave',()=>tag.classList.remove('hovered'));
 });
+const first=document.querySelector('.skill-tag[data-img]');
+if(first){previewImg.src=first.dataset.img;previewImg.style.opacity='1';placeholder.style.display='none'}
 
-// Show first image by default
-const firstTag = document.querySelector('.skill-tag[data-img]');
-if (firstTag) {
-  previewImg.src = firstTag.dataset.img;
-  previewImg.style.opacity = '1';
-  placeholder.style.display = 'none';
-}
-
-// ===== Email Copy =====
-function copyEmail() {
-  navigator.clipboard.writeText('3514776103@qq.com').then(() => {
-    const toast = document.getElementById('toast');
-    toast.classList.add('show');
-    setTimeout(() => toast.classList.remove('show'), 2000);
-
-    const btns = document.querySelectorAll('.btn-outline');
-    btns.forEach(b => {
-      if (b.textContent.includes('复制邮箱') || b.textContent.includes('351477')) {
-        b.classList.add('copied');
-        const orig = b.textContent;
-        b.textContent = '✅ 已复制';
-        setTimeout(() => {
-          b.classList.remove('copied');
-          b.textContent = orig;
-        }, 2000);
-      }
-    });
-  });
-}
+// Copy email
+function copyEmail(){navigator.clipboard.writeText('3514776103@qq.com').then(()=>{const toast=document.getElementById('toast');toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),2000);const btns=document.querySelectorAll('.btn-outline');btns.forEach(b=>{if(b.textContent.includes('复制')||b.textContent.includes('351477')){b.classList.add('copied');const o=b.textContent;b.textContent='✅ 已复制';setTimeout(()=>{b.classList.remove('copied');b.textContent=o},2000)}})})}
 </script>
 </body>
 </html>
