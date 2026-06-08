@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="马一丹 - 机械结构实习生 | 哈尔滨工程大学 光电信息科学与工程 本科在读">
+  <title>马一丹 · 机械结构实习生</title>
+  <style>
+    /* ===== Reset & Base ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --primary: #1a365d;
+      --primary-light: #2c5282;
+      --accent: #3182ce;
+      --accent-light: #ebf4ff;
+      --text: #1a202c;
+      --text-muted: #4a5568;
+      --text-light: #718096;
+      --bg: #ffffff;
+      --bg-light: #f7fafc;
+      --border: #e2e8f0;
+      --shadow: 0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.06);
+      --shadow-md: 0 4px 6px rgba(0,0,0,.07), 0 2px 4px rgba(0,0,0,.06);
+      --radius: 8px;
+      --max-width: 800px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--accent); text-decoration: none; transition: color .2s; }
+    a:hover { color: var(--primary-light); }
+
+    /* ===== Nav ===== */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(255,255,255,.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 24px;
+    }
+    .nav-inner {
+      max-width: var(--max-width); margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 56px;
+    }
+    .nav-name { font-weight: 700; font-size: 1.05rem; color: var(--primary); letter-spacing: .02em; }
+    .nav-links { display: flex; gap: 28px; list-style: none; }
+    .nav-links a { color: var(--text-muted); font-size: .9rem; font-weight: 500; }
+    .nav-links a:hover { color: var(--primary); }
+
+    /* ===== Sections ===== */
+    section { padding: 80px 24px; }
+    .container { max-width: var(--max-width); margin: 0 auto; }
+
+    .section-label {
+      font-size: .8rem; font-weight: 600; letter-spacing: .08em;
+      color: var(--accent); text-transform: uppercase; margin-bottom: 12px;
+    }
+    .section-title {
+      font-size: 1.75rem; font-weight: 700; color: var(--primary);
+      margin-bottom: 32px; letter-spacing: .02em;
+    }
+
+    /* ===== Hero ===== */
+    .hero {
+      padding: 100px 24px 80px;
+      background: linear-gradient(160deg, #f0f4f8 0%, #ffffff 40%, #ffffff 100%);
+    }
+    .hero .container { text-align: center; }
+    .hero h1 {
+      font-size: 2.8rem; font-weight: 800; color: var(--primary);
+      letter-spacing: .04em; margin-bottom: 8px;
+    }
+    .hero .subtitle {
+      font-size: 1.15rem; color: var(--text-muted); margin-bottom: 4px;
+    }
+    .hero .school {
+      font-size: .95rem; color: var(--text-light); margin-bottom: 36px;
+    }
+    .hero .school span { font-weight: 600; color: var(--text-muted); }
+    .hero-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 11px 28px; border-radius: 6px; font-size: .95rem;
+      font-weight: 600; cursor: pointer; transition: all .2s;
+      text-decoration: none; border: 2px solid transparent;
+    }
+    .btn-primary { background: var(--primary); color: #fff; }
+    .btn-primary:hover { background: var(--primary-light); color: #fff; }
+    .btn-outline { background: transparent; color: var(--primary); border-color: var(--border); }
+    .btn-outline:hover { border-color: var(--primary); color: var(--primary); }
+
+    /* ===== Education ===== */
+    .edu-card {
+      background: var(--bg-light); border-radius: var(--radius);
+      padding: 32px; border: 1px solid var(--border);
+    }
+    .edu-card .school-name { font-size: 1.2rem; font-weight: 700; color: var(--primary); }
+    .edu-card .degree { color: var(--text-muted); font-size: .95rem; margin: 4px 0 16px; }
+    .edu-highlights { list-style: none; display: flex; flex-wrap: wrap; gap: 10px; }
+    .edu-highlights li {
+      background: #fff; border: 1px solid var(--border);
+      padding: 7px 16px; border-radius: 20px; font-size: .88rem;
+      font-weight: 500; color: var(--text-muted);
+      display: flex; align-items: center; gap: 6px;
+    }
+    .edu-highlights li strong { color: var(--primary); }
+    .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
+
+    /* ===== Project ===== */
+    .project-card {
+      background: var(--bg); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 36px;
+      box-shadow: var(--shadow);
+    }
+    .project-header { margin-bottom: 24px; }
+    .project-header h3 { font-size: 1.2rem; color: var(--primary); }
+    .project-header .role { font-size: .9rem; color: var(--accent); font-weight: 600; }
+    .project-header .date { font-size: .85rem; color: var(--text-light); margin-top: 2px; }
+    .project-desc { font-size: .9rem; color: var(--text-muted); margin-bottom: 28px; line-height: 1.8; }
+    .project-modules { display: grid; gap: 20px; }
+    .module { border-left: 3px solid var(--accent); padding-left: 18px; }
+    .module h4 { font-size: .95rem; color: var(--primary); margin-bottom: 6px; }
+    .module ul { list-style: none; }
+    .module li { font-size: .9rem; color: var(--text-muted); margin-bottom: 4px; position: relative; padding-left: 16px; }
+    .module li::before { content: "·"; position: absolute; left: 0; color: var(--text-light); font-weight: bold; }
+
+    /* ===== Skills ===== */
+    .skills-grid { display: grid; gap: 20px; }
+    .skill-group { background: var(--bg-light); border-radius: var(--radius); padding: 24px 28px; border: 1px solid var(--border); }
+    .skill-group h4 { font-size: .85rem; color: var(--text-light); text-transform: uppercase; letter-spacing: .08em; margin-bottom: 14px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .tag { background: #fff; border: 1px solid var(--border); padding: 6px 14px; border-radius: 20px; font-size: .88rem; font-weight: 500; color: var(--text-muted); }
+    .tag.highlight { background: var(--accent-light); border-color: var(--accent); color: var(--accent); font-weight: 700; }
+
+    /* ===== Footer ===== */
+    footer {
+      background: var(--primary); color: rgba(255,255,255,.75);
+      text-align: center; padding: 48px 24px;
+    }
+    footer .name { font-size: 1.2rem; font-weight: 700; color: #fff; margin-bottom: 8px; }
+    footer .contact { display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; margin-bottom: 16px; }
+    footer .contact a { color: rgba(255,255,255,.8); font-size: .9rem; }
+    footer .contact a:hover { color: #fff; }
+    footer .note { font-size: .8rem; color: rgba(255,255,255,.5); }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 640px) {
+      .hero h1 { font-size: 2rem; }
+      .hero { padding: 72px 20px 56px; }
+      section { padding: 56px 20px; }
+      .section-title { font-size: 1.4rem; }
+      .nav-links { gap: 16px; }
+      .project-card { padding: 24px; }
+      .edu-highlights { flex-direction: column; }
+      .hero-actions { flex-direction: column; align-items: center; }
+      .btn { width: 100%; justify-content: center; }
+    }
+
+    /* ===== Print ===== */
+    @media print {
+      nav, .hero-actions, footer .note { display: none; }
+      .hero { padding: 40px 0; background: none; }
+      section { padding: 30px 0; }
+      body { font-size: 11pt; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Nav -->
+<nav>
+  <div class="nav-inner">
+    <div class="nav-name">马一丹</div>
+    <ul class="nav-links">
+      <li><a href="#education">教育</a></li>
+      <li><a href="#projects">项目</a></li>
+      <li><a href="#skills">技能</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="container">
+    <h1>马一丹</h1>
+    <p class="subtitle">机械结构实习生</p>
+    <p class="school"><span>哈尔滨工程大学</span> · 光电信息科学与工程 本科在读</p>
+    <div class="hero-actions">
+      <a href="马一丹_机械结构实习生_简历.pdf" class="btn btn-primary" download>📄 下载简历 PDF</a>
+      <a href="mailto:3514776103@qq.com" class="btn btn-outline">✉️ 发送邮件</a>
+    </div>
+  </div>
+</section>
+
+<!-- Education -->
+<section id="education">
+  <div class="container">
+    <p class="section-label">Education</p>
+    <h2 class="section-title">教育背景</h2>
+    <div class="edu-card">
+      <div class="school-name">哈尔滨工程大学 <span style="font-weight:400;font-size:.85rem;color:var(--text-light);">211 / 双一流</span></div>
+      <p class="degree">光电信息科学与工程 · 本科 &nbsp;|&nbsp; 专业排名 <strong style="color:var(--primary);">前 10%</strong> &nbsp;|&nbsp; 2024.09 至今</p>
+      <ul class="edu-highlights">
+        <li><span class="dot"></span> <strong>2025 年度国家奖学金</strong></li>
+        <li><span class="dot"></span> <strong>2025 年度黑龙江省三好学生</strong></li>
+        <li><span class="dot"></span> 多次校级一等奖学金</li>
+        <li><span class="dot"></span> 校级优秀团干部</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Projects -->
+<section id="projects" style="background:var(--bg-light);">
+  <div class="container">
+    <p class="section-label">Projects</p>
+    <h2 class="section-title">项目经历</h2>
+    <div class="project-card">
+      <div class="project-header">
+        <h3>全国大学生机器人大赛 RoboMaster</h3>
+        <p class="role">工程组组长 & 运营经理</p>
+        <p class="date">2025.09 – 2026.06</p>
+      </div>
+      <p class="project-desc">队伍从零组建，同时承担<strong>技术方向</strong>和<strong>团队运营</strong>两条线。</p>
+      <div class="project-modules">
+        <div class="module">
+          <h4>🔧 机械设计</h4>
+          <ul>
+            <li>独立完成工程机器人<strong>七自由度码垛机械臂</strong>与舵轮底盘的构型设计</li>
+            <li>使用 SolidWorks 完成 3D 建模、运动仿真、整机装配与干涉检查</li>
+            <li>使用 Ansys Workbench 对关键承力件做强度校核与拓扑优化</li>
+          </ul>
+        </div>
+        <div class="module">
+          <h4>🤝 跨方向统筹</h4>
+          <ul>
+            <li>协同机械、电控、硬件三个方向团队，制定项目节点和每周里程碑</li>
+            <li>推动整机联调按期交付，从设计方案到实车上场全流程跟进</li>
+          </ul>
+        </div>
+        <div class="module">
+          <h4>🏆 赛事运营</h4>
+          <ul>
+            <li>主导校内选拔赛的组织工作，覆盖 1000+ 参赛学生</li>
+            <li>负责赛程编排、场地协调、人员调度和现场应急处理</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Skills -->
+<section id="skills">
+  <div class="container">
+    <p class="section-label">Skills</p>
+    <h2 class="section-title">技能</h2>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <h4>🖥️ CAD 建模</h4>
+        <div class="tags">
+          <span class="tag highlight">SolidWorks</span>
+          <span class="tag">Fusion 360</span>
+          <span class="tag">3D 建模</span>
+          <span class="tag">运动仿真</span>
+          <span class="tag">工程图出图</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h4>📐 仿真分析</h4>
+        <div class="tags">
+          <span class="tag highlight">Ansys Workbench</span>
+          <span class="tag">静力学分析</span>
+          <span class="tag">模态分析</span>
+          <span class="tag">拓扑优化</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h4>🌐 语言能力</h4>
+        <div class="tags">
+          <span class="tag highlight">CET-6 577 分</span>
+          <span class="tag">英文文献阅读</span>
+          <span class="tag">日常口语交流</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h4>📋 其他</h4>
+        <div class="tags">
+          <span class="tag">Office 套件</span>
+          <span class="tag">BOM 清单整理</span>
+          <span class="tag">技术文档撰写</span>
+          <span class="tag">CNC / 3D 打印</span>
+          <span class="tag">发明专利 ×1</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="name">马一丹</div>
+  <div class="contact">
+    <a href="mailto:3514776103@qq.com">📧 3514776103@qq.com</a>
+    <a href="tel:13198170381">📞 131-9817-0381</a>
+  </div>
+  <p class="note">哈尔滨工程大学 · 光电信息科学与工程 · 2024 级本科</p>
+</footer>
+
+</body>
+</html>
