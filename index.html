@@ -83,7 +83,7 @@
     .proj-info{flex:1;padding:40px 48px 32px;display:flex;flex-direction:column;justify-content:center;min-width:0}
     .proj-info h3{font-size:1.25rem;font-weight:700;margin-bottom:4px}
     .proj-info .role-line{font-size:.85rem;color:var(--accent);font-weight:600;margin-bottom:24px}
-    .proj-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;margin-bottom:22px}
+    .proj-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-bottom:22px}
     .pmod{border-left:2px solid var(--accent-light);padding-left:16px}
     .pmod h4{font-size:.84rem;font-weight:700;margin-bottom:10px;letter-spacing:.02em}
     .pmod li{font-size:.8rem;color:var(--ink-2);margin-bottom:5px;list-style:none;position:relative;padding-left:14px;line-height:1.55}
@@ -110,15 +110,13 @@
     .explore-intro{width:180px;flex-shrink:0;align-self:center}
     .explore-intro h3{font-size:.95rem;font-weight:700;margin-bottom:10px}
     .explore-intro p{font-size:.82rem;color:var(--ink-2);line-height:1.75;font-style:italic}
-    .explore-grid{flex:1;display:grid;grid-template-columns:1.2fr 0.8fr 1fr;grid-template-rows:1fr 1fr;gap:10px;height:380px}
+    .explore-grid{flex:1;display:grid;grid-template-columns:repeat(3,1fr);gap:10px;height:380px}
     .exp-card{border:1px solid var(--rule);border-radius:3px;overflow:hidden;background:var(--paper);transition:all .25s;cursor:default;position:relative}
     .exp-card:hover{border-color:var(--accent);transform:translateY(-2px);box-shadow:0 4px 16px rgba(26,22,20,.08)}
     .exp-card img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
     .exp-card .cap{position:absolute;bottom:0;left:0;right:0;padding:12px 14px;background:linear-gradient(transparent,rgba(26,22,20,.7));color:#fff}
     .exp-card .cap h4{font-size:.82rem;font-weight:700;margin-bottom:1px}
     .exp-card .cap p{font-size:.72rem;opacity:.85}
-    .exp-card.featured{grid-row:1/3}
-    .exp-card:nth-child(2){grid-column:2/4}
 
     @media(max-width:860px){
       body{overflow:auto}
@@ -143,10 +141,8 @@
       .skills-right{width:100%;min-height:200px;aspect-ratio:4/3}
       .explore-wrap{flex-direction:column;padding:24px;gap:18px}
       .explore-intro{width:100%}
-      .explore-grid{grid-template-columns:1fr 1fr;grid-template-rows:auto;height:auto;gap:8px}
+      .explore-grid{grid-template-columns:1fr 1fr;height:auto;gap:8px}
       .exp-card{aspect-ratio:3/2}
-      .exp-card.featured{grid-row:auto}
-      .exp-card:nth-child(2){grid-column:auto}
     }
     @media(max-width:480px){
       .explore-grid{grid-template-columns:1fr}
@@ -235,20 +231,16 @@
       <p class="role-line">工程组组长 & 运营经理 · 2025.09 – 2026.06</p>
       <div class="proj-grid">
         <div class="pmod">
-          <h4>机械设计</h4>
-          <li>独立完成<strong>七自由度码垛机械臂</strong>与舵轮底盘构型设计</li>
-          <li>SolidWorks 3D 建模、运动仿真与干涉检查</li>
-          <li>Ansys Workbench 强度校核与拓扑优化</li>
+          <h4>技术实践</h4>
+          <li>独立完成<strong>七自由度码垛机械臂</strong>与舵轮底盘的构型方案设计</li>
+          <li>使用 SolidWorks 完成整机 3D 建模、运动仿真、干涉检查与工程图出图</li>
+          <li>基于 Ansys Workbench 对关键承力件进行静力学分析与拓扑优化</li>
         </div>
         <div class="pmod">
-          <h4>跨方向统筹</h4>
-          <li>协同机械、电控、硬件三方向，制定项目节点与里程碑</li>
-          <li>推动方案设计 → 加工装配 → 整机联调全流程交付</li>
-        </div>
-        <div class="pmod">
-          <h4>赛事运营</h4>
-          <li>主导校内选拔赛，覆盖 <strong>1000+</strong> 参赛学生</li>
-          <li>赛程编排、场地协调、人员调度与应急处理</li>
+          <h4>项目统领</h4>
+          <li>作为工程组组长与机械方向负责人，统筹技术方案设计与推进</li>
+          <li>协同机械、电控、硬件三方向团队，制定项目甘特图与每周里程碑</li>
+          <li>推动从方案设计到加工装配再到整机联调的全流程按期交付</li>
         </div>
       </div>
       <div class="thumbs" id="projThumbs">
@@ -280,9 +272,10 @@
 <!-- ===== 学习与探索 ===== -->
 <div class="tab-panel" id="tab-explore">
   <div class="explore-wrap">
-    <div class="explore-intro"><h3>学习与探索</h3><p>课余保持对各领域的好奇，从社团运营到志愿服务，从跨文化交流到设计创作。</p></div>
+    <div class="explore-intro"><h3>学习与探索</h3><p>课余保持对各领域的好奇，从赛事运营到志愿服务，从跨文化交流到设计创作。</p></div>
     <div class="explore-grid">
-      <div class="exp-card featured"><img src="images/club-defense.jpg" alt="十佳社团答辩" loading="lazy"><div class="cap"><h4>十佳社团答辩</h4><p>代表社团展示年度成果</p></div></div>
+      <div class="exp-card"><img src="images/club-defense.jpg" alt="十佳社团答辩" loading="lazy"><div class="cap"><h4>十佳社团答辩</h4><p>代表社团展示年度成果</p></div></div>
+      <div class="exp-card"><img src="images/car-and-me.jpg" alt="赛事运营" loading="lazy"><div class="cap"><h4>赛事运营</h4><p>校内选拔赛 1000+ 参赛者</p></div></div>
       <div class="exp-card"><img src="images/volunteer-teach.jpg" alt="志愿讲解" loading="lazy"><div class="cap"><h4>科普志愿</h4><p>为小学生讲解机器人</p></div></div>
       <div class="exp-card"><img src="images/club-award.jpg" alt="五四表彰" loading="lazy"><div class="cap"><h4>五四表彰</h4><p>社团荣获校级表彰</p></div></div>
       <div class="exp-card"><img src="images/english-talk.jpg" alt="英语交流" loading="lazy"><div class="cap"><h4>跨文化交流</h4><p>英语讲解机器人技术</p></div></div>
